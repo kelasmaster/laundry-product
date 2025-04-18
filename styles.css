@@ -27,16 +27,19 @@ header {
     z-index: 1000;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #000;
-    display: inline-block;
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -63,6 +66,7 @@ nav {
 .hamburger {
     display: none;
     cursor: pointer;
+    margin-left: 20px;
 }
 
 .hamburger span {
@@ -265,5 +269,9 @@ footer {
 @media (max-width: 480px) {
     .products {
         grid-template-columns: 1fr;
+    }
+    
+    .logo img {
+        height: 30px;
     }
 }
