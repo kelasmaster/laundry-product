@@ -4,29 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreshClean Laundry Products</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Header with Navigation -->
     <header>
         <div class="container">
-            <div class="logo">FreshClean</div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#parfum">Parfum Laundry</a></li>
-                    <li><a href="#deterjen">Deterjen Laundry</a></li>
-                    <li><a href="#softener">Softener Laundry</a></li>
-                    <li><a href="#anti-noda">Anti Noda</a></li>
-                    <li><a href="#others">Others</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo.png" alt="FreshClean Logo">
                 </div>
-            </nav>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#parfum">Parfum Laundry</a></li>
+                        <li><a href="#deterjen">Deterjen Laundry</a></li>
+                        <li><a href="#softener">Softener Laundry</a></li>
+                        <li><a href="#anti-noda">Anti Noda</a></li>
+                        <li><a href="#others">Others</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -49,8 +53,33 @@
                     <a href="products/detergent1.html" class="btn">View Details</a>
                 </div>
                 
-                <!-- Additional products 3-6 -->
-                <!-- ... -->
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="images/product3.jpg" alt="Lavender Fabric Softener">
+                    <h3>Lavender Fabric Softener</h3>
+                    <a href="products/softener1.html" class="btn">View Details</a>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="images/product4.jpg" alt="Stain Remover">
+                    <h3>Stain Remover</h3>
+                    <a href="products/stain-remover.html" class="btn">View Details</a>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img src="images/product5.jpg" alt="Bleach Alternative">
+                    <h3>Bleach Alternative</h3>
+                    <a href="products/bleach.html" class="btn">View Details</a>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <img src="images/product6.jpg" alt="Delicate Wash">
+                    <h3>Delicate Wash</h3>
+                    <a href="products/delicate.html" class="btn">View Details</a>
+                </div>
             </div>
             
             <!-- Pagination -->
@@ -100,6 +129,6 @@
         </div>
     </footer>
 
-     <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
