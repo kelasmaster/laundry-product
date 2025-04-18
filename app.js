@@ -9,6 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
     hamburger.addEventListener('click', function() {
         this.classList.toggle('active');
         navLinks.classList.toggle('active');
+        
+        // Toggle body scroll when menu is open
+        if (navLinks.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
     });
     
     // Close mobile menu when clicking a link
@@ -18,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (window.innerWidth <= 768) {
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
+                document.body.style.overflow = 'auto';
             }
         });
     });
@@ -38,5 +46,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
+    });
+    
+    // Close menu when clicking outside on mobile
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768 && 
+            !e.target.closest('.hamburger') && 
+            !e.target.closest('.nav-links') &&
+            navLinks.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Window resize event to reset menu if screen size changes
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
     });
 });
